@@ -7,9 +7,11 @@ public class Heros{
   private int hAge;
   private List<String> hSuperpower;
   private List<String> hWeakness;
+  private static List<Heros> myHeroes= new ArrayList<Heros>();
 
   public Heros(String name){
     hName = name;
+    myHeroes.add(this);
   }
   public String getName(){
     return hName;
@@ -25,5 +27,9 @@ public class Heros{
   public List<String> getWeakness(){
     hWeakness = new ArrayList<String>();
     return hWeakness;
+  }
+  public static List<Heros> all(){
+
+    return myHeroes;
   }
 }
