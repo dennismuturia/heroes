@@ -1,0 +1,15 @@
+.nav-wrapper{
+  background-color: #000;
+}
+.header{
+  position: absolute;
+  width: 100%;
+  margin-top: -10%;
+  z-index: -1000;
+}
+.spidee{
+  width: 90%;
+}
+.thebat{
+  width: 120%;
+}
