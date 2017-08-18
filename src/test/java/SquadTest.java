@@ -34,4 +34,14 @@ public class SquadTest{
     Squad mySquad = new Squad("Killer_Squad");
     assertEquals(4, mySquad.getMaxSize());
   }
+
+  @Test
+  public void joins_Squad(){
+    Heros myHero = new Heros("SpiderMan");
+    Squad mySquad = new Squad(myHero);
+    assertEquals(true, mySquad.joinsTeam());
+
+
+
+  }
 }
