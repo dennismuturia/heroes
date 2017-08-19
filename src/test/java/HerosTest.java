@@ -40,4 +40,24 @@ public class HerosTest{
     assertEquals(true, Heros.all().contains(myHero1));
     assertEquals(true, Heros.all().contains(myHero2));
   }
+
+  @Test
+  public  void clear_EmplyAllHeroesInHerosTask(){
+    Heros myHero = new Heros("Killer_Squad");
+    Heros.clear();
+    assertEquals(Heros.all().size(), 0);
+  }
+
+  @Test
+  public void getId_herosInstantiateWithAnID_1() {
+    Heros.clear();
+    Heros myHero = new Heros("Killer_Squad");
+    assertEquals(1, myHero.getId());
+  }
+  @Test
+  public void find_returnsHeroWithSameId_secondHero() {
+    Heros firstHero = new Heros("Batman");
+    Heros secondHero = new Heros("SpiderMan");
+    assertEquals(Heros.find(secondHero.getId()), secondHero);
+  }
 }

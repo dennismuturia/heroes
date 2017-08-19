@@ -21,27 +21,51 @@ public class SquadTest{
     assertEquals(true, Squad.all().contains(mySquad1));
     assertEquals(true, Squad.all().contains(mySquad2));
   }
+  @Test
+  public void clear_emptiesAllSquadsFromList_0() {
+    Squad mySquad = new Squad("KIller_squad");
+    Squad.clear();
+    assertEquals(Squad.all().size(), 0);
+  }
 
   @Test
   public void getId_ChecksIfInstantiatesWithAnId(){
-    Squad.clear();
     Squad mySquad = new Squad("Killer_Squad");
     assertEquals(1, mySquad.getId());
   }
 
   @Test
+  public void find_returnsSquadWithSameId_secondSQuad() {
+    Squad.clear();
+    Squad firstSquad = new Squad("KIller_squad");
+    Squad secondSquad = new Squad("The_Finishers");
+    assertEquals(Squad.find(secondSquad.getId()), secondSquad);
+  }
+  @Test
   public void maxsize_CheckTheMaxSize(){
     Squad mySquad = new Squad("Killer_Squad");
-    assertEquals(4, mySquad.getMaxSize());
+    assertEquals(0, mySquad.getMaxSize());
   }
 
   @Test
-  public void joins_Squad(){
-    Heros myHero = new Heros("SpiderMan");
-    Squad mySquad = new Squad(myHero);
-    assertEquals(true, mySquad.joinsTeam());
+  public void getHeroes_initiallyInnstatiateswithEmplyArray(){
+    Squad.clear();
+    Squad mySquad = new Squad("Killer_Squad");
+    assertEquals(0, mySquad.getHeroes().size());
+  }
 
+  @Test
+  public void addHeroes_initiallyAddstheHeroes(){
+    Squad mySquad = new Squad("KIller_squad");
+    Heros myHero = new Heros("Batman");
+    mySquad.addHero(myHero);
+    assertTrue(mySquad.getHeroes().contains(myHero));
+  }
 
-
+  @Test
+  public void getHero_initiallyReturnsEmptyList_ArrayList() {
+    Squad.clear();
+    Squad mySquad = new Squad("KIller_squad");
+    assertEquals(0, mySquad.getHeroes().size());
   }
 }

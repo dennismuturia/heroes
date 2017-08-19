@@ -8,10 +8,12 @@ public class Heros{
   private List<String> hSuperpower;
   private List<String> hWeakness;
   private static List<Heros> myHeroes= new ArrayList<Heros>();
+  private int hId;
 
   public Heros(String name){
     hName = name;
     myHeroes.add(this);
+    hId = myHeroes.size();
   }
   public String getName(){
     return hName;
@@ -29,7 +31,15 @@ public class Heros{
     return hWeakness;
   }
   public static List<Heros> all(){
-
     return myHeroes;
+  }
+  public static void clear(){
+    myHeroes.clear();
+  }
+  public int getId() {
+    return hId;
+  }
+  public static Heros find(int id) {
+    return myHeroes.get(id - 1);
   }
 }
