@@ -20,48 +20,18 @@
 </div>
   <div class="col s4">
     <!--Image to be put here-->
-    #if ($heroes)
-      #foreach ($hero in $heroes)
-      <p>$hero.getName()</p>
-      #end
-      #else
-      <p>No heroes</p>
-    #end
+
   </div>
   <div class="col s4">
   <br/>
-  <h4>Build Your Own Hero</h4>
 
-    <form action="/heroes" method="post">
-      <label for="name">Name</label>
-      <input type="text" name= "name" id= "name">
-      <label for="super1">First SuperPower</label>
-      <input type="text" name="super1" id="super1">
-      <label for="super2">Second SuperPower</label>
-      <input type="text" name="super2" id="super2">
-      <label for="super3">Third SuperPower</label>
-      <input type="text" name="super3" id="super3">
-
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-    </form>
   </div>
   <br/>
   <br/>
   <div class="col s4">
-    <h4>Make your own Squad</h4>
-    <form action="squad" method="post">
-      <label for="name">Squad Name</label>
-      <input type="text" name="name" id="name">
-      <label for="size">Squad Name</label>
-      <input type="text" name="size" id="size">
-      <label for="cause">Squad Name</label>
-      <input type="text" name="cause" id="cause">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-    </form>
+
+    <a href="/heroes/new">Add a new Hero</a>
+    <a href="/hero">View all current heroes</a>
   </div>
   <div class="col s4">
     <h4>View Squad</h4>
