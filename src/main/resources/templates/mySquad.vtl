@@ -1,4 +1,11 @@
 <h1>$mySquad.getName()</h1>
+<h1>$mySquad.getName() heroes:</h1>
 
-<a href="/categories/$category.getId()/tasks/new">Add a new Hero</a>
+<ul>
+  #foreach($task in $mySquad.getHeroes())
+   <li>$hero.getName()</li>
+  #end
+</ul>
+
+<a href="/squads/$mySquad.getId()/heroes/new">Add a new Hero</a>
 <a href="/squads">All squads</a>

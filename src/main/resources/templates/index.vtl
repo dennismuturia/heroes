@@ -29,9 +29,17 @@
   <br/>
   <br/>
   <div class="col s4">
+    <h2>Your heroes</h2>
+    #if ($heroes)
+      #foreach ($hero in $heroes)
+      <p>$hero.getName()</p>
+      #end
+      #else
+      <p>No heroes</p>
+    #end
 
     <a href="/heroes/new">Add a new Hero</a>
-    <a href="/hero">View all current heroes</a>
+    <a href="/heroes">View all current heroes</a>
   </div>
   <div class="col s4">
     <h4>View Squad</h4>
