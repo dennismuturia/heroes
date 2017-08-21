@@ -17,3 +17,6 @@ Java, Spark and Velocity
 ## Set-Up
 
 Gradle Run and locate it in the local host 4567.
+
+## licence
+  {GNU LIcence}(licence)
