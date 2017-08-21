@@ -3,7 +3,7 @@
 this is an app that allows the user to create a squad and populate it with heros of their choice. The user can choose the cause and every squad has a finite number
 ### Owner
 ##### DENNIS MUTURIA
-##Technologies
+## Technologies
 
 Java, Spark and Velocity
 ## Specifications
@@ -19,4 +19,4 @@ Java, Spark and Velocity
 Gradle Run and locate it in the local host 4567.
 
 ## licence
-  {GNU LIcence}(licence)
+  (GNU Licence){licence}
